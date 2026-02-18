@@ -1,0 +1,22 @@
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+// Create nodes
+let head = new Node(10);
+let second = new Node(20);
+let third = new Node(30);
+
+// Link nodes
+head.next = second;
+second.next = third;
+
+// Traversal
+let temp = head;
+while (temp !== null) {
+    console.log(temp.data);
+    temp = temp.next;
+}
