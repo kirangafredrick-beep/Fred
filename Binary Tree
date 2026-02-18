@@ -1,0 +1,23 @@
+class TreeNode {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+// Create tree
+let root = new TreeNode(10);
+root.left = new TreeNode(5);
+root.right = new TreeNode(15);
+
+// Inorder Traversal
+function inorder(node) {
+    if (node !== null) {
+        inorder(node.left);
+        console.log(node.value);
+        inorder(node.right);
+    }
+}
+
+inorder(root);
