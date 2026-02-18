@@ -1,0 +1,19 @@
+class Queue {
+    constructor() {
+        this.items = [];
+    }
+
+    enqueue(element) {
+        this.items.push(element);
+    }
+
+    dequeue() {
+        return this.items.shift();
+    }
+}
+
+let queue = new Queue();
+queue.enqueue(10);
+queue.enqueue(20);
+
+console.log(queue.dequeue()); // 10
